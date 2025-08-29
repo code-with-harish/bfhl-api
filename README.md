@@ -2,23 +2,43 @@
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![JavaScript](https://img.shields.io/badge/Language-JavaScript-yellow.svg)](https://www.javascript.com/)
+[![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)](https://bfhl-xxxxx.vercel.app/bfhl)
 
 ## Description
 
-This repository contains the bfhl-api project. No description provided.
+**bfhl-api** is a simple RESTful API built using **Node.js** and **Express**.  
+It processes the provided data, classifies **alphabets**, **numbers**, and **special characters**, separates **even** and **odd** numbers, calculates their **sum**, and returns a structured JSON response.  
+
+The API is hosted on **Vercel** and is publicly accessible.
+
+---
 
 ## Key Features and Highlights
 
-- JavaScript backend API
-- Express framework for routing
+- 🚀 **Fast & Lightweight** Node.js backend
+- ⚡ **Express framework** for efficient routing
+- 🔢 Separates **even** & **odd** numbers
+- 🔡 Extracts **alphabets** and concatenates them
+- 💰 Calculates the **sum** of numeric values
+- 🌐 Fully deployed on **Vercel**
+
+---
 
 ## Installation
 
 To install the necessary dependencies, run the following command:
 
 ```bash
-npm install express@^4.18.2
+npm install express
 ```
+
+
+
+
+
+
+
+
 
 ## Usage
 
@@ -41,12 +61,42 @@ To use the bfhl-api project, follow these steps:
 
 4. Start the server:
    ```bash
-   node server.js
+   node api/bfhl.js
+   ```
+5. Test API using Postman or cURL:
+   ```nginx
+   POST https://bfhl-xxxxx.vercel.app/bfhl
    ```
 
 ## API Documentation
 
-No API documentation provided.
+Endpoint
+```bash
+POST /bfhl
+```
+Request Body
+```json
+{
+  "data": ["A", "R", "1", "334", "4", "$"]
+}
+```
+Response
+```json
+{
+    "is_success": true,
+    "user_id": "john_doe_17091999",
+    "email": "john@xyz.com",
+    "roll_number": "ABCD123",
+    "odd_numbers": ["1"],
+    "even_numbers": ["334", "4"],
+    "alphabets": ["A", "R"],
+    "special_characters": ["$"],
+    "sum": "339",
+    "concat_string": "Ra"
+}
+
+```
+
 
 ## Dependencies
 
